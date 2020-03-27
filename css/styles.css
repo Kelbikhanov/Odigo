@@ -1,8 +1,12 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 html {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 *, *::before, *::after {
-    box-sizing: inherit;
+    -webkit-box-sizing: inherit;
+            box-sizing: inherit;
 }
 body {
     background:rgb(255, 253, 248);
@@ -28,6 +32,8 @@ img {
 .header__active {
     background: #0E1D28;
     z-index: 1000;
+    -webkit-transition: .2s linear;
+    -o-transition: .2s linear;
     transition: .2s linear;
 }
 
@@ -61,15 +67,25 @@ img {
     left: 0;
 }
 .header__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    align-items: flex-end;
-    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding-top: 56px;
 }
 .header__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 .header__item {
     margin-right: 82px;
@@ -107,7 +123,9 @@ opacity: .75;
 }
 .burger__line_second {
     top: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
 }
 .burger__line_third {
     bottom: 0;
@@ -117,7 +135,7 @@ opacity: .75;
 
 .intro {
     min-height: 100vh;
-    background: url(../img/Hero.jpg)
+    background: url(../img/Hero-min.jpg)
      center no-repeat;
      background-size: cover;
      padding-top: 263px;
@@ -139,8 +157,11 @@ opacity: .75;
     margin-bottom: 59px;
 }
 .search-form__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 .search-form__field {
     width: 297px;
@@ -155,6 +176,30 @@ opacity: .75;
     padding-left: 43px;
     padding-bottom: 22px;
 
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #fff;
+}
+.search-form__field::-webkit-input-placeholder {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #fff;
+}
+.search-form__field::-moz-placeholder {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #fff;
+}
+.search-form__field:-ms-input-placeholder {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #fff;
+}
+.search-form__field::-ms-input-placeholder {
     font-weight: 500;
     font-size: 18px;
     line-height: 24px;
@@ -193,7 +238,10 @@ opacity: .75;
      background-color: #fff;
      margin: 0 auto;
 
-     box-shadow: 0px 2px 20px 
+     -webkit-box-shadow: 0px 2px 20px 
+     rgba(21, 24, 36, 0.15993);
+
+             box-shadow: 0px 2px 20px 
      rgba(21, 24, 36, 0.15993);
  }
  .benefits__title {
@@ -208,16 +256,23 @@ opacity: .75;
     line-height: 42px;
     color: #102746;
 
-    transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+
+        -ms-transform: translateY(-100%);
+
+            transform: translateY(-100%);
     background-color: #fff;
  }
  .benefits__cards {
+     display: -ms-grid;
      display: grid;
+     -ms-grid-columns: 1fr 55px 1fr 55px 1fr;
      grid-template-columns: repeat(3, 1fr);
-     grid-column-gap:55px ;
+     column-gap:55px ;
      padding: 0 100px;
  }
  .benefits__card {
+     -ms-grid-column-span: 1;
      grid-column: span 1;
      margin-bottom: 112px;
  }
@@ -251,6 +306,8 @@ opacity: .75;
     margin-bottom: 112px;
     background: url(../img/Shape.svg) no-repeat
     95% center;
+    -webkit-transition: .2s all;
+    -o-transition: .2s all;
     transition: .2s all;
  }
  .benefits__card-more:hover,
@@ -268,10 +325,17 @@ background: url(../img/Shape.svg) no-repeat
      margin-bottom: 131px;
  }
  .places__caption {
+     display: -webkit-box;
+     display: -ms-flexbox;
      display: flex;
-     flex-wrap: wrap;
-     align-items: center;
-     justify-content: space-between;
+     -ms-flex-wrap: wrap;
+         flex-wrap: wrap;
+     -webkit-box-align: center;
+         -ms-flex-align: center;
+             align-items: center;
+     -webkit-box-pack: justify;
+         -ms-flex-pack: justify;
+             justify-content: space-between;
      padding-bottom: 36px;
  }
  .plases__title {
@@ -285,6 +349,8 @@ background: url(../img/Shape.svg) no-repeat
     text-decoration: none;
     background: url(../img/Shape.svg) no-repeat
     95% center;
+    -webkit-transition: .2s all;
+    -o-transition: .2s all;
     transition: .2s all;
  }
 .places__view-all:hover,
@@ -294,17 +360,21 @@ background: url(../img/Shape.svg) no-repeat
         right center;
  }
  .places__cards {
+     display: -ms-grid;
      display: grid;
+     -ms-grid-columns: 1fr 10px 1fr 10px 1fr 10px 1fr 10px 1fr 10px 1fr;
      grid-template-columns: repeat(6, 1fr);
-     grid-column-gap: 10px;
-     grid-row-gap: 10px;
+     column-gap: 10px;
+     row-gap: 10px;
  }
  .places__card {
      position: relative;
      overflow: hidden;
  }
  .places__card:hover .places__card-pic {
-transform: scale(1.05);
+-webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+        transform: scale(1.05);
  }
  .places__card:after {
     content: "";
@@ -316,25 +386,33 @@ transform: scale(1.05);
     top: 0;
     left: 0;
     z-index: 2;
-    box-shadow: 0px 2px 20px 
+    -webkit-box-shadow: 0px 2px 20px 
+    rgba(21, 24, 36, 0.15993);
+            box-shadow: 0px 2px 20px 
     rgba(21, 24, 36, 0.15993);
  }
  .places__card-size-lg {
+     -ms-grid-column-span: 3;
      grid-column: span 3;
  }
  .places__card-size-sm {
+    -ms-grid-column-span: 2;
     grid-column: span 2;
 }
  .places__card-pic {
      width: 100%;
+     -webkit-transition: .2s all;
+     -o-transition: .2s all;
      transition: .2s all;
  }
  .places__card-pic-size-lg {
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     height: 354px;
  }
  .places__card-pic-size-sm {
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     height: 283px;
  }
  .places__card-title {
@@ -362,9 +440,11 @@ transform: scale(1.05);
      margin-bottom: 139px;
  }
  .tours__tour {
+     display: -ms-grid;
      display: grid;
+     -ms-grid-columns: 1fr 108px 1fr;
      grid-template-columns: repeat(2, 1fr);
-     grid-column-gap: 108px;
+     column-gap: 108px;
  }
  .tour__info {
      padding-left: 47px;
@@ -394,6 +474,8 @@ transform: scale(1.05);
     text-decoration: none;
     background: url(../img/Shape.svg) no-repeat
     95% center;
+    -webkit-transition: .2s all;
+    -o-transition: .2s all;
     transition: .2s all;
  }
 .tour__more:hover,
@@ -409,14 +491,22 @@ transform: scale(1.05);
      margin-bottom: 86px;
  }
  .top__cards {
+     display: -ms-grid;
      display: grid;
+     -ms-grid-columns: 1fr 57px 1fr 57px 1fr 57px 1fr 57px 1fr 57px 1fr;
      grid-template-columns: repeat(6, 1fr);
-     grid-column-gap:57px;
-     grid-row-gap: 57px;
+     column-gap:57px;
+     row-gap: 57px;
  }
  .top__card {
+     display: -webkit-box;
+     display: -ms-flexbox;
      display: flex;
-     flex-direction: column;
+     -webkit-box-orient: vertical;
+     -webkit-box-direction: normal;
+         -ms-flex-direction: column;
+             flex-direction: column;
+     -ms-grid-column-span: 2;
      grid-column: span 2;
  }
  .top__title {
@@ -426,10 +516,17 @@ transform: scale(1.05);
      position: relative;
  }
  .top__card-stats {
+     display: -webkit-box;
+     display: -ms-flexbox;
      display: flex;
-     flex-wrap: wrap;
-     justify-content: flex-end;
-     align-items: center;
+     -ms-flex-wrap: wrap;
+         flex-wrap: wrap;
+     -webkit-box-pack: end;
+         -ms-flex-pack: end;
+             justify-content: flex-end;
+     -webkit-box-align: center;
+         -ms-flex-align: center;
+             align-items: center;
      position: absolute;
      bottom: 0;
      left: 0;
@@ -516,16 +613,24 @@ background: url(../img/coments.svg)
      padding: 119px 0;
  }
  .footer__item {
+     display: -webkit-box;
+     display: -ms-flexbox;
      display: flex;
-     flex-wrap: wrap;
+     -ms-flex-wrap: wrap;
+         flex-wrap: wrap;
  }
  .footer__logo {
      width: 50%;
  }
  .footer__nav {
+     display: -webkit-box;
+     display: -ms-flexbox;
      display: flex;
-     flex-wrap: wrap;
-     justify-content: space-between;
+     -ms-flex-wrap: wrap;
+         flex-wrap: wrap;
+     -webkit-box-pack: justify;
+         -ms-flex-pack: justify;
+             justify-content: space-between;
      width: 50%;
  }
  .footer__menu-title {
@@ -559,7 +664,7 @@ background: url(../img/coments.svg)
      }
      .benefits__cards {
         padding: 0 15px;
-        grid-column-gap: 35px;
+        column-gap: 35px;
      }
      .benefits__card {
          margin-bottom: 20px;
@@ -568,16 +673,19 @@ background: url(../img/coments.svg)
          padding: 45px 15px;
      }
      .benefits__wrap {
-         box-shadow: none;
+         -webkit-box-shadow: none;
+                 box-shadow: none;
      }
      .places__card-size-lg {
+         -ms-grid-column-span: 6;
          grid-column: span 6;
      }
      .places__card-size-sm {
+        -ms-grid-column-span: 6;
         grid-column: span 6;
      }
      .tours__tour {
-         grid-column-gap: 35px;
+         column-gap: 35px;
      }
      .tour__info {
          padding-left: 0;
@@ -592,10 +700,11 @@ background: url(../img/coments.svg)
 
      }
      .top__cards {
-         grid-column-gap: 25px;
-         grid-row-gap: 25px ;
+         column-gap: 25px;
+         row-gap: 25px ;
      }
      .top__card {
+         -ms-grid-column-span: 3;
          grid-column: span 3;
      }
      .top__card-desc {
@@ -624,10 +733,16 @@ background: url(../img/coments.svg)
         background: #0E1D28;
         z-index: 10;
         padding: 75px;
-        transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+            -ms-transform: translateX(100%);
+                transform: translateX(100%);
     }
     .header__nav_active {
-        transform: translateX(0);
+        -webkit-transform: translateX(0);
+            -ms-transform: translateX(0);
+                transform: translateX(0);
+        -webkit-transition: .2s all linear;
+        -o-transition: .2s all linear;
         transition: .2s all linear;
     }
     .header__item {
@@ -660,11 +775,19 @@ background: url(../img/coments.svg)
        
     }
     .header__nav_close-line:first-child {
-        transform: translateY(-50%)
+        -webkit-transform: translateY(-50%)
+         rotate(45deg);
+            -ms-transform: translateY(-50%)
+         rotate(45deg);
+                transform: translateY(-50%)
          rotate(45deg);
     }
     .header__nav_close-line:last-child {
-        transform: translateY(-50%)
+        -webkit-transform: translateY(-50%)
+         rotate(-45deg);
+            -ms-transform: translateY(-50%)
+         rotate(-45deg);
+                transform: translateY(-50%)
          rotate(-45deg);
     }
     
@@ -673,6 +796,7 @@ background: url(../img/coments.svg)
         margin-right: 0;
     }
     .benefits__card {
+        -ms-grid-column-span: 3;
         grid-column: span 3;
     }
  }
@@ -696,6 +820,18 @@ background: url(../img/coments.svg)
     }
     .search-form__field {
         padding-bottom: 12px;
+    }
+    .search-form__field::-webkit-input-placeholder {
+        font-size: 16px;
+    }
+    .search-form__field::-moz-placeholder {
+        font-size: 16px;
+    }
+    .search-form__field:-ms-input-placeholder {
+        font-size: 16px;
+    }
+    .search-form__field::-ms-input-placeholder {
+        font-size: 16px;
     }
     .search-form__field::placeholder {
         font-size: 16px;
@@ -738,15 +874,18 @@ background: url(../img/coments.svg)
         margin-bottom: 70px;
     }
     .your__pic, .tour__info {
+        -ms-grid-column-span: 2;
         grid-column: span 2;
     }
     .your__pic {
         padding-bottom: 0px;
     }
     .your__pic-mob-firs {
-        grid-row-start: -1;
+        -ms-grid-row: -1;
+            grid-row-start: -1;
     }
     .top__card {
+        -ms-grid-column-span: 6;
         grid-column: span 6;
     }
     .top__card-comment {
@@ -771,4 +910,3 @@ background: url(../img/coments.svg)
         width: 50%;
     }
  }
-
